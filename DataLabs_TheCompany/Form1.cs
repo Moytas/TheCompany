@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,7 @@ namespace DataLabs_TheCompany
 {
     public partial class MainForm : Form
     {
+        public DBManager DBMngr = new DBManager();
         public PersonEntry PersonForm;
 
         public MainForm()
@@ -27,6 +29,7 @@ namespace DataLabs_TheCompany
 
         private void bt_AddPerson_Click(object sender, EventArgs e)
         {
+            DBMngr.StartDB();
             PersonForm.Show();
         }
     }

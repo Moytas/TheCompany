@@ -37,9 +37,9 @@ namespace DataLabs_TheCompany
             this.bt_AddPerson.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.bt_AddPerson.Location = new System.Drawing.Point(143, 99);
+            this.bt_AddPerson.Location = new System.Drawing.Point(143, 65);
             this.bt_AddPerson.Name = "bt_AddPerson";
-            this.bt_AddPerson.Size = new System.Drawing.Size(95, 36);
+            this.bt_AddPerson.Size = new System.Drawing.Size(95, 34);
             this.bt_AddPerson.TabIndex = 0;
             this.bt_AddPerson.Text = "Add Person";
             this.bt_AddPerson.UseVisualStyleBackColor = true;
@@ -49,7 +49,7 @@ namespace DataLabs_TheCompany
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(385, 450);
+            this.ClientSize = new System.Drawing.Size(385, 399);
             this.Controls.Add(this.bt_AddPerson);
             this.Name = "MainForm";
             this.Text = "The Company Mainfraim";
