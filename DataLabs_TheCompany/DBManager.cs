@@ -12,14 +12,19 @@ namespace DataLabs_TheCompany
     {
         public OleDbConnection Con;
 
-        public void StartDB()
+        public string StartDB()
         {
-            string connectionString = Properties.Settings.Default.Database1ConnectionString;
+            string returnString = "Error";
+
+            string connectionString = Properties.Settings.Default.MyDbConnectionString;
+            Console.WriteLine(connectionString);
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                Console.WriteLine("The application has connected to the database successfully.");
+                returnString = "The application has connected to the database successfully.";
             }
+
+            return returnString;
         }
     }
 }

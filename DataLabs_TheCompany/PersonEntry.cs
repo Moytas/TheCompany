@@ -33,7 +33,7 @@ namespace DataLabs_TheCompany
 
         private void StartUp()
         {
-            DBMngr.StartDB();
+            lbl_Messages.Text = DBMngr.StartDB();
             lb_Power.SelectedIndex = -1;
             lb_Power.Items.Clear();
             List<string> _powers = _powersManager.GetAllPowers();
@@ -169,7 +169,7 @@ namespace DataLabs_TheCompany
         private void GetDB()
         {
             Person p = new Person();
-            //p = DBMngr.GetAllPersons();
+            //
         }
     }
 }

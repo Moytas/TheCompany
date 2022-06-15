@@ -50,6 +50,7 @@ namespace DataLabs_TheCompany
             this.cb_Country = new System.Windows.Forms.ComboBox();
             this.lbl_Warning = new System.Windows.Forms.Label();
             this.btn_ShowList = new System.Windows.Forms.Button();
+            this.lbl_Messages = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // tb_FirstName
@@ -323,11 +324,20 @@ namespace DataLabs_TheCompany
             this.btn_ShowList.UseVisualStyleBackColor = true;
             this.btn_ShowList.Click += new System.EventHandler(this.btn_ShowList_Click);
             // 
+            // lbl_Messages
+            // 
+            this.lbl_Messages.AutoSize = true;
+            this.lbl_Messages.Location = new System.Drawing.Point(254, 20);
+            this.lbl_Messages.Name = "lbl_Messages";
+            this.lbl_Messages.Size = new System.Drawing.Size(0, 13);
+            this.lbl_Messages.TabIndex = 22;
+            // 
             // PersonEntry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lbl_Messages);
             this.Controls.Add(this.btn_ShowList);
             this.Controls.Add(this.lbl_Warning);
             this.Controls.Add(this.cb_Country);
@@ -379,5 +389,6 @@ namespace DataLabs_TheCompany
         private System.Windows.Forms.ComboBox cb_Country;
         private System.Windows.Forms.Label lbl_Warning;
         private System.Windows.Forms.Button btn_ShowList;
+        private System.Windows.Forms.Label lbl_Messages;
     }
 }
