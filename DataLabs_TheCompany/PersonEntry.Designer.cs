@@ -49,6 +49,7 @@ namespace DataLabs_TheCompany
             this.btn_Add = new System.Windows.Forms.Button();
             this.cb_Country = new System.Windows.Forms.ComboBox();
             this.lbl_Warning = new System.Windows.Forms.Label();
+            this.btn_ShowList = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // tb_FirstName
@@ -61,6 +62,7 @@ namespace DataLabs_TheCompany
             this.tb_FirstName.Name = "tb_FirstName";
             this.tb_FirstName.Size = new System.Drawing.Size(242, 26);
             this.tb_FirstName.TabIndex = 0;
+            this.tb_FirstName.TextChanged += new System.EventHandler(this.tb_FirstName_TextChanged);
             // 
             // lbl_FirstName
             // 
@@ -311,11 +313,22 @@ namespace DataLabs_TheCompany
             this.lbl_Warning.Size = new System.Drawing.Size(0, 22);
             this.lbl_Warning.TabIndex = 20;
             // 
+            // btn_ShowList
+            // 
+            this.btn_ShowList.Location = new System.Drawing.Point(407, 376);
+            this.btn_ShowList.Name = "btn_ShowList";
+            this.btn_ShowList.Size = new System.Drawing.Size(75, 23);
+            this.btn_ShowList.TabIndex = 21;
+            this.btn_ShowList.Text = "Show List";
+            this.btn_ShowList.UseVisualStyleBackColor = true;
+            this.btn_ShowList.Click += new System.EventHandler(this.btn_ShowList_Click);
+            // 
             // PersonEntry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btn_ShowList);
             this.Controls.Add(this.lbl_Warning);
             this.Controls.Add(this.cb_Country);
             this.Controls.Add(this.btn_Add);
@@ -365,5 +378,6 @@ namespace DataLabs_TheCompany
         private System.Windows.Forms.Button btn_Add;
         private System.Windows.Forms.ComboBox cb_Country;
         private System.Windows.Forms.Label lbl_Warning;
+        private System.Windows.Forms.Button btn_ShowList;
     }
 }

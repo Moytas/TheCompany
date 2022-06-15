@@ -12,8 +12,12 @@ namespace DataLabs_TheCompany
 {
     public partial class PersonEntry : Form
     {
+        public DBManager DBMngr = new DBManager();
+        // public EventHandler textChanged;
+        // public event textAltered = new EventHandler<EventArgs>;
         private PowersForm _powersForm = new PowersForm();
         private FlawsForm _flawsForm = new FlawsForm();
+        private Form2 _form2 = new Form2();
 
         private PersonManager _personsManager = new PersonManager();
         private PowersManager _powersManager = new PowersManager();
@@ -24,10 +28,12 @@ namespace DataLabs_TheCompany
         {
             InitializeComponent();
             StartUp();
+            GetDB();
         }
 
         private void StartUp()
         {
+            DBMngr.StartDB();
             lb_Power.SelectedIndex = -1;
             lb_Power.Items.Clear();
             List<string> _powers = _powersManager.GetAllPowers();
@@ -87,6 +93,7 @@ namespace DataLabs_TheCompany
                 if (FieldsFilled())
                 {
                     Person newEntry = new Person();
+                    newEntry.FirstName = tb_FirstName.Text;
                     _personsManager.Add(newEntry);
                 }
                 else
@@ -143,6 +150,26 @@ namespace DataLabs_TheCompany
         private void btn_FlawEdit_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_ShowList_Click(object sender, EventArgs e)
+        {
+           
+                _personsManager.PeopleList[0].ChangeGender();
+           
+        }
+
+        private void tb_FirstName_TextChanged(object sender, EventArgs e)
+        {
+            if(tb_FirstName.Text.Length > 5)
+            {
+            }
+        }
+
+        private void GetDB()
+        {
+            Person p = new Person();
+            //p = DBMngr.GetAllPersons();
         }
     }
 }

@@ -9,7 +9,7 @@ namespace DataLabs_TheCompany
 {
     public class PersonManager
     {
-        private List<Person> PeopleList = new List<Person>();
+        public List<Person> PeopleList = new List<Person>();
         private List<Supers> TargetList = new List<Supers>();
 
         public void Add(Person _person)

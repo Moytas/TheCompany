@@ -10,5 +10,6 @@ namespace DataLabs_TheCompany
     {
         public string Ability { get; set; }
         public string Flaw { get; set; }
+
     }
 }

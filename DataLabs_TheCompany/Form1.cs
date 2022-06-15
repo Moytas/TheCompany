@@ -13,7 +13,7 @@ namespace DataLabs_TheCompany
 {
     public partial class MainForm : Form
     {
-        public DBManager DBMngr = new DBManager();
+        
         public PersonEntry PersonForm;
 
         public MainForm()
@@ -29,7 +29,9 @@ namespace DataLabs_TheCompany
 
         private void bt_AddPerson_Click(object sender, EventArgs e)
         {
-            DBMngr.StartDB();
+
+            //DBMngr.StartDB();
+            //DBMngr.GetAllPersons();
             PersonForm.Show();
         }
     }
